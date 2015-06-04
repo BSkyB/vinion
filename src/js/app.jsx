@@ -54,22 +54,43 @@ class ResultBox extends React.Component {
             height: '335px',
             width: '335px',
             padding: '20px',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            position: 'relative'
         };
 
+        var tagStyle = {
+            backgroundColor: 'rgba(0,0,0,0.4)',
+            padding: '5px 14px',
+            borderRadius: '15px',
+            marginLeft: '10px',
+            color: 'white'
+        };
 
+        var tagParentStyle = {
+            bottom: '15px',
+            right: '10px',
+            position: 'absolute'
+        };
+
+        var dateStyle = {
+            color: '#ccc'
+        }
 
         return <div style={divStyle}>
             <VideoThumb url={this.props.hit._source.url}/>
 
-            <p>
+            <p style={dateStyle}>
                 20/03/2014
             </p>
 
-            <div >
-                <span>Politics</span>
-                <span>Hair</span>
-                <span>Eyebrows</span>
+            <p>
+                Lorem ipsum dolor sit amet...
+            </p>
+
+            <div style={tagParentStyle}>
+                <span style={tagStyle}>Politics</span>
+                <span style={tagStyle}>Hair</span>
+                <span style={tagStyle}>Eyebrows</span>
             </div>
         </div>
     }
