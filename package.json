@@ -1,0 +1,18 @@
+{
+  "name": "vinion",
+  "version": "0.0.1",
+  "description": "Automated and crowd sourced video tagging and search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^6.1.2",
+    "browser-sync": "^2.7.6",
+    "browserify": "^10.2.3",
+    "gulp": "^3.9.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
