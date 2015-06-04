@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <title>Vinion, The Video Minion</title>
+
+    <style>
+      @font-face {
+        font-family: SkyReg;
+        src: url("assets/Sky_Reg.ttf");
+      }
+
+      body {
+        margin: 0;
+        font-family: SkyReg;
+        background-color: rgb(82,13,87);
+      }
+
+      video#bgvid {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+      }
+
+      footer {
+        height: 140px;
+        position: fixed;
+        bottom: 0;
+        background-color: rgba(63, 79, 43, 0.5);
+        width: 100%;
+        margin-bottom: 0;
+        transition: margin 0.5s;
+      }
+      footer img {
+        display: block;
+        margin: 41px auto;
+      }
+      @media screen and (max-height: 450px) {
+        footer {
+          margin-bottom: -140px;
+        }
+      }
+
+      article {
+        height: 120px;
+        line-height: 120px;
+        color: white;
+      }
+
+      .search-box {
+        margin: 0 auto;
+        margin-top: 5vh;
+        width: 65%;
+      }
+      .search-box input {
+        outline: none;
+        -webkit-appearance: none;
+        height: 100px;
+        font-size: 48px;
+        line-height: 48px;
+        color: white;
+        border: 2px solid white;
+        background-color: rgba(0,0,0,0.2);
+        width: 100%;
+        background-image:url('assets/img/search.png');
+        background-position-y: 19px;
+        background-position-x: 20px;
+        padding-left: 90px;
+        background-repeat:no-repeat;
+        font-family: SkyReg;
+      }
+      .search-box input::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+      }
+      .search-box p {
+        text-align: center;
+        margin: 100px 0 22px 0;
+        color: white;
+        font-size: 72px;
+      }
+      .search-box img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <video autoplay loop poster="polina.jpg" id="bgvid">
+      <source src="assets/stock2.mp4" type="video/mp4"></source>
+    </video>
+
+    <div class="search-box">
+      <img src="assets/img/logo.png" />
+      <p>Search for videos</p>
+        <form action="search.html" method="get">
+          <input name="search" type="search" />
+          <input type="submit" style="display:none"/>
+        </form>
+    </div>
+
+    <footer>
+      <img src="assets/img/contributors.png" />
+    </footer>
+  </body>
+</html>
