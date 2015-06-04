@@ -67,14 +67,20 @@ class ResultBox extends React.Component {
         };
 
         var tagParentStyle = {
-            bottom: '15px',
+            bottom: '20px',
             right: '10px',
             position: 'absolute'
         };
 
         var dateStyle = {
+            marginBottom: '10px',
             color: '#ccc'
-        }
+        };
+
+        var descriptionStyle = {
+            marginTop: '0',
+            fontSize: '18px'
+        };
 
         return <div style={divStyle}>
             <VideoThumb url={this.props.hit._source.url}/>
@@ -83,8 +89,8 @@ class ResultBox extends React.Component {
                 20/03/2014
             </p>
 
-            <p>
-                Lorem ipsum dolor sit amet...
+            <p style={descriptionStyle}>
+                George Osborne reveals new budget
             </p>
 
             <div style={tagParentStyle}>
@@ -92,6 +98,7 @@ class ResultBox extends React.Component {
                 <span style={tagStyle}>Hair</span>
                 <span style={tagStyle}>Eyebrows</span>
             </div>
+
         </div>
     }
 
