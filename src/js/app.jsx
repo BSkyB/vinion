@@ -111,9 +111,26 @@ class ResultsPanel extends React.Component {
         var resultsElements = _.map(this.props.hits, function (hit) {
             return <ResultBox key={hit._id} hit={hit}/>
         });
-        return <div>
+        var divStyle = {
+            display: 'inline-block',
+            margin: '30px'
+        }
+        return <div style={divStyle}>
             {resultsElements}
         </div>;
+    }
+}
+
+
+class SideBar extends React.Component {
+
+    render() {
+        var imgStyle = {
+            verticalAlign: 'top'
+        }
+        return (
+            <img style={imgStyle} src="/assets/img/filter_bar.png" />
+        )
     }
 }
 
@@ -140,11 +157,13 @@ class App extends React.Component {
 
 
     }
+    
+    
 
     render() {
         return (
             <div>
-                <ViHeader/>
+                <SideBar/>
                 <ResultsPanel hits={this.state.hits}/>
             </div>
         );
